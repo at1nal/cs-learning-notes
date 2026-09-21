@@ -196,7 +196,7 @@ The same pattern of bits could represent a number in one situation and a charact
 
 ## 4. Binary
 
-A **bit** is a binary digit.
+A **bit** is a single binary digit.
 
 ```text
 bit = 0 or 1
@@ -212,6 +212,20 @@ A simple way to picture it is:
 ```
 
 Computers use huge numbers of tiny electronic switches called **transistors** to represent these states.
+> same idea as using 5 fingers to count from 0~31, giving 2⁵ = 32 possible combinations.
+
+
+### Number Systems
+
+The **base** tells us how many digits are available in a number system.
+
+| System | Base | Digits |
+| --- | ---: | --- |
+| Unary | 1 | one symbol |
+| Binary | 2 | `0`, `1` |
+| Decimal | 10 | `0`–`9` |
+
+Binary matters most for computers because two states map naturally to electronic on/off states.
 
 
 ### Decimal
@@ -296,7 +310,7 @@ One **byte** contains eight bits.
 Eight bits give:
 
 ```text
-2⁸ = 256
+11111111 = 2⁸ = 256
 ```
 
 possible combinations.
@@ -323,9 +337,9 @@ Computers can represent text by assigning numbers to characters.
 For example:
 
 ```text
-A = 65
-B = 66
-C = 67
+A = 01000001 = 65
+B = 01000010 = 66
+C = 01000011 = 67
 ```
 
 So if the computer sees the binary representation of `65` in a text context, it can interpret it as:
@@ -340,22 +354,22 @@ A
 In ASCII:
 
 ```text
-A = 65
-a = 97
+A = 01000001 = 65
+a = 01100001 = 97
 ```
 
 The difference is:
 
 ```text
-32
+97 - 65 = 32
 ```
 
-This is a nice example of how something that looks high-level, like changing uppercase to lowercase, can come down to changing bits underneath.
+Changing uppercase to lowercase is a nice example of how something that looks high-level can come down to a simple bit change at a lower level. In ASCII, only one bit needs to change from `0` to `1`, which adds `32` to the value.
 
 
 ### Unicode
 
-ASCII is not enough to represent all languages and symbols.
+ASCII(256) is not enough to represent all languages and symbols.
 
 **Unicode** supports a much larger set of characters, including:
 
