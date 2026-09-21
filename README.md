@@ -16,7 +16,7 @@ The repository currently includes notes from **CS50**, and I plan to continue ad
 
 #### CS50x 2026
 
-- [Week 0 — Scratch]()
+- [Week 0 — Scratch](https://github.com/at1nal/cs-learning-notes/blob/main/CS50x2026/week-0-Scratch.md)
 
 More notes will be added as I continue learning.
 
