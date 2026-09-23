@@ -88,7 +88,7 @@ Roughly:
 ```text
 Program
    ↓
-API
+  API
    ↓
 External service
    ↓
@@ -523,7 +523,7 @@ For example:
  ↓
 ...
  ↓
-1
+ 1
 ```
 
 The number of steps grows approximately as:
@@ -584,20 +584,25 @@ Computer science is interested in both **correctness** and **design**.
 For example:
 
 ```text
-Pick up phone book
-Open to middle
-Look at page
+'Pick up' phone book
+'Open to' middle
+'Look at' page
 
-If person is on page
-    Call person
-Else if person is earlier in book
-    Open middle of left half
-    Repeat
-Else if person is later in book
-    Open middle of right half
-    Repeat
-Else
-    Quit
+1  [If] (person is on page)
+2      'Call' person
+3  [Else if[ (person is earlier in book)
+4      'Open to' middle of left half of book
+5      {Go back to} line 3
+6  [Else if] (person is later in book)
+7      'Open to' middle of right half of book
+8      {Go back to} line 3
+9  [Else] ←exceptions
+10     'Quit'
+
+'': functions - verbs or actions
+[]: conditions
+(): boolean expressions - yes / no
+{}: loop - cyclical behavior
 ```
 
 The point is to work out the:
