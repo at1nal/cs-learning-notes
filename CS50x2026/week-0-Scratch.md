@@ -837,13 +837,13 @@ A Scratch project mainly contains:
 The stage uses an x-y coordinate system.
 
 ```text
-          +y
-           ↑
-           |
+         +y
+         ↑
+         |
 -x  ←  (0,0)  →  +x
-           |
-           ↓
-          -y
+         |
+         ↓
+         -y
 ```
 
 Changing `x` moves a sprite left or right.
@@ -856,23 +856,23 @@ Changing `y` moves it up or down.
 Scratch can ask the user for input:
 
 ```text
-ask "What's your name?"
+[ask ("What's your name?")]
 ```
 
 The result is stored in:
 
 ```text
-answer
+[answer]
 ```
 
 That value can then be used somewhere else:
 
 ```text
-answer
+[answer] << input 
    ↓
-join "Hello, " + answer
+[join ("Hello, " + answer)]
    ↓
-say
+[say (join "Hello, " + answer)]
 ```
 
 So the result from one operation can become the input to another.
@@ -880,13 +880,13 @@ So the result from one operation can become the input to another.
 
 ### Forever Loops
 
-Interactive programs usually need to keep checking whether something has happened.
+Interactive programs usually need to constantly check whether something has happened.
 
 For example:
 
 ```text
-forever
-    if touching mouse
+[forever]
+    [if (touching (mouse-pointer)) then]
         ...
 ```
 
@@ -951,7 +951,7 @@ Stage and sprites
       ↓
 Basic interaction
       ↓
-Movement
+   Movement
       ↓
 Reusable functions
       ↓
